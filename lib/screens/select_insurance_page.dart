@@ -1,9 +1,9 @@
 import 'package:autoloop_mobile/components/rectangular_button.dart';
-import 'package:autoloop_mobile/screens/select_insurance_page.dart';
+import 'package:autoloop_mobile/screens/homepage.dart';
 import 'package:flutter/material.dart';
 
-class Homepage extends StatelessWidget {
-  const Homepage({Key? key}) : super(key: key);
+class SelectInsurancePage extends StatelessWidget {
+  const SelectInsurancePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -82,32 +82,35 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Column(
                               children: [
+                                Container(
+                                  height: 102.0,
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0XFFF7EAFF),
+                                    borderRadius: BorderRadius.circular(16.0),
+                                  ),
+                                  child: Column(children: const [
+                                    Text("h"),
+                                    Text("h"),
+                                  ]),
+                                ),
                                 Column(
                                   children: const [],
                                 ),
                               ],
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(bottom: 52.0),
+                              padding: const EdgeInsets.only(top: 52.0),
                               child: ReusableButton(
                                 backgroundColor: const Color(0XFF202C39),
                                 borderColor: const Color(0XFF202C39),
                                 fontSize: 16.0,
                                 fontWeight: FontWeight.w500,
                                 height: 44.0,
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const SelectInsurancePage(),
-                                    ),
-                                  );
-                                },
+                                onPressed: () {},
                                 text: "Proceed",
                                 textColor: Colors.white,
                                 width: double.infinity,
@@ -115,17 +118,29 @@ class Homepage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                             ),
-                            //  const Padding(
-                            //   padding: EdgeInsets.all(10.0),
-                            //   child: ReusableInputField(
-                            //     borderRadius: 8.0,
-                            //     enabledBorderColor: Color(0xFFF9F8F8),
-                            //     obscureText: false,
-                            //     labelColor: Color(0XFFE5E5E5),
-                            //     hintText: "Enter here",
-                            //     height: 50.0,
-                            //   ),
-                            // ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20.0),
+                              child: ReusableButton(
+                                backgroundColor: Colors.white,
+                                borderColor: Colors.black,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w500,
+                                height: 44.0,
+                                onPressed: () {
+                                  Navigator.pop(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Homepage(),
+                                    ),
+                                  );
+                                },
+                                text: "Back",
+                                textColor: const Color(0XFF202C39),
+                                width: double.infinity,
+                                hasGradient: false,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                            ),
                           ],
                         ),
                       ),
