@@ -43,6 +43,7 @@ class ReusableButton extends StatelessWidget {
             child: Text(
               text,
               style: TextStyle(
+                fontFamily: 'Poppins',
                 color: textColor,
                 fontSize: fontSize,
                 fontWeight: fontWeight,

@@ -56,15 +56,19 @@ class ReusableInputField extends StatelessWidget {
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(borderRadius),
               borderSide:
-                  const BorderSide(color: Colors.transparent, width: 2.0)),
+                  const BorderSide(color: Color(0XFFF9F8F8), width: 2.0)),
           hintText: hintText,
           hintStyle: TextStyle(
+              fontFamily: 'Poppins',
               fontSize: 14.0,
               fontWeight: FontWeight.w500,
               color: Colors.grey[400]),
           labelText: hasLabelText == true ? labelText : null,
           labelStyle: TextStyle(
-              color: labelColor, fontSize: 14.0, fontWeight: FontWeight.bold),
+              fontFamily: 'Poppins',
+              color: labelColor,
+              fontSize: 14.0,
+              fontWeight: FontWeight.bold),
           suffixIcon: null == suffixIcon
               ? null
               : Icon(suffixIcon, color: labelColor, size: 20.0),
