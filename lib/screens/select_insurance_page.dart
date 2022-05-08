@@ -55,9 +55,9 @@ class SelectInsurancePage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(top: 8.0),
                             child: SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.45,
+                              width: MediaQuery.of(context).size.width * 0.55,
                               child: const Text(
-                                "What would you love to insure today?",
+                                "What type of insurance would you love to buy?",
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
                                   fontSize: 19.0,
@@ -71,9 +71,9 @@ class SelectInsurancePage extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      top: height * 0.35,
+                      top: height * 0.32,
                       child: Container(
-                        height: height * 0.60,
+                        height: height * 0.68,
                         width: width,
                         padding: const EdgeInsets.all(16.0),
                         decoration: const BoxDecoration(
@@ -88,24 +88,89 @@ class SelectInsurancePage extends StatelessWidget {
                             Column(
                               children: [
                                 Container(
-                                  height: 102.0,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     color: const Color(0XFFF7EAFF),
                                     borderRadius: BorderRadius.circular(16.0),
                                   ),
-                                  child: Column(children: const [
-                                    Text("h"),
-                                    Text("h"),
+                                  child: Column(children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(16.0),
+                                      child: Row(
+                                        children: const [
+                                          Text(
+                                            "Third Party Insurance",
+                                            style: TextStyle(
+                                                fontFamily: 'Poppins',
+                                                fontSize: 16.0,
+                                                fontWeight: FontWeight.w500,
+                                                color: Color(0XFF202C39)),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const Padding(
+                                      padding: EdgeInsets.only(
+                                          bottom: 16.0,
+                                          left: 16.0,
+                                          right: 16.0),
+                                      child: Text(
+                                        "Third-party insurance covers an individual or firm against a loss caused by some third party",
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.w400,
+                                            color: Color(0XFF878787)),
+                                      ),
+                                    ),
                                   ]),
                                 ),
-                                Column(
-                                  children: const [],
+                                const SizedBox(
+                                  height: 24.0,
+                                ),
+                                Container(
+                                  // height: 110.0,
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0XFFF7EAFF),
+                                    borderRadius: BorderRadius.circular(16.0),
+                                  ),
+                                  child: Column(children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(16.0),
+                                      child: Row(
+                                        children: const [
+                                          Text(
+                                            "Comprehensive Insurance",
+                                            style: TextStyle(
+                                                fontFamily: 'Poppins',
+                                                fontSize: 16.0,
+                                                fontWeight: FontWeight.w500,
+                                                color: Color(0XFF202C39)),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const Padding(
+                                      padding: EdgeInsets.only(
+                                          bottom: 16.0,
+                                          left: 16.0,
+                                          right: 16.0),
+                                      child: Text(
+                                        "A comprehensive car insurance is an extensive motor insurance plan that covers the insured person against both, own damages and any third party liabilities.",
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.w400,
+                                            color: Color(0XFF878787)),
+                                      ),
+                                    ),
+                                  ]),
                                 ),
                               ],
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(top: 52.0),
+                              padding: const EdgeInsets.only(top: 67.0),
                               child: ReusableButton(
                                 backgroundColor: const Color(0XFF202C39),
                                 borderColor: const Color(0XFF202C39),

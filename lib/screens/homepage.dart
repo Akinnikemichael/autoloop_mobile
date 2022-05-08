@@ -55,7 +55,7 @@ class Homepage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(top: 8.0),
                             child: SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.45,
+                              width: MediaQuery.of(context).size.width * 0.5,
                               child: const Text(
                                 "What would you love to insure today?",
                                 style: TextStyle(
@@ -73,7 +73,7 @@ class Homepage extends StatelessWidget {
                     Positioned(
                       top: height * 0.35,
                       child: Container(
-                        height: height * 0.60,
+                        height: height * 0.63,
                         width: width,
                         padding: const EdgeInsets.all(16.0),
                         decoration: const BoxDecoration(
@@ -83,41 +83,54 @@ class Homepage extends StatelessWidget {
                             topRight: Radius.circular(16.0),
                           ),
                         ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              children: [
-                                Column(
-                                  children: const [],
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 52.0),
-                              child: ReusableButton(
-                                backgroundColor: const Color(0XFF202C39),
-                                borderColor: const Color(0XFF202C39),
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w500,
-                                height: 44.0,
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const SelectInsurancePage(),
-                                    ),
-                                  );
-                                },
-                                text: "Proceed",
-                                textColor: Colors.white,
-                                width: double.infinity,
-                                hasGradient: false,
-                                borderRadius: BorderRadius.circular(8.0),
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 20.0),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  vehicleCard("images/car.png", "Car"),
+                                  vehicleCard("images/bus.png", "Bus"),
+                                ],
                               ),
-                            ),
-                          ],
+                              const SizedBox(height: 20.0),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  vehicleCard("images/bike.png", "Bike"),
+                                  vehicleCard("images/truck.png", "Truck"),
+                                ],
+                              ),
+                              const SizedBox(height: 132.0),
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 52.0),
+                                child: ReusableButton(
+                                  backgroundColor: const Color(0XFF202C39),
+                                  borderColor: const Color(0XFF202C39),
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w500,
+                                  height: 44.0,
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const SelectInsurancePage(),
+                                      ),
+                                    );
+                                  },
+                                  text: "Proceed",
+                                  textColor: Colors.white,
+                                  width: double.infinity,
+                                  hasGradient: false,
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     )
@@ -130,7 +143,39 @@ class Homepage extends StatelessWidget {
       ),
     );
   }
-}
 
-// Before: 220 lines of code
-// After: 1 lines of code
+  Widget vehicleCard(String vehicleImageUrl, String vehicleName) {
+    return Container(
+      height: 100,
+      width: 180,
+      decoration: BoxDecoration(
+        color: const Color(0XFFF7EAFF),
+        borderRadius: BorderRadius.circular(16.0),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              width: 100,
+              child: Image(image: AssetImage(vehicleImageUrl)),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 15.0),
+              child: Text(
+                vehicleName,
+                style: const TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 14.0,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0XFF202C39),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
