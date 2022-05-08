@@ -71,9 +71,9 @@ class SelectInsurancePage extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      top: height * 0.35,
+                      top: height * 0.32,
                       child: Container(
-                        height: height * 0.65,
+                        height: height * 0.68,
                         width: width,
                         padding: const EdgeInsets.all(16.0),
                         decoration: const BoxDecoration(
