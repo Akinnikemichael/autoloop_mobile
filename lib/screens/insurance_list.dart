@@ -8,21 +8,24 @@ class InsuranceList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Insurance Companies"),
-        ),
-        body: ListView.builder(itemBuilder: (BuildContext context, int index) {
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color(0xff202C39),
+        leading: Icon(Icons.arrow_back),
+        title: const Text("Select Offering"),
+      ),
+      body: ListView.builder(
+        itemBuilder: (BuildContext context, int index) {
           return const Padding(
             padding: EdgeInsets.all(8.0),
             child: CompanyCard(
                 companyImage: "images/Logo-access.png",
-                companyName: "companyName",
-                price: "price"),
+                companyName: "Insurance from Alliance",
+                price: "40 GHc",
+                frequency: "/ year"),
           );
-        }));
-  }
-
-  TextStyle _textStyle(double size) {
-    return TextStyle(color: Colors.white, fontSize: size);
+        },
+      ),
+    );
   }
 }
