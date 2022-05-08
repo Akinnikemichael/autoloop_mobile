@@ -1,7 +1,7 @@
 import 'package:autoloop_mobile/components/rectangular_button.dart';
 import 'package:autoloop_mobile/components/reusable_input_field.dart';
-import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:flutter/material.dart';
 
 class InsurancePaperworkPage extends StatelessWidget {
   const InsurancePaperworkPage({Key? key}) : super(key: key);

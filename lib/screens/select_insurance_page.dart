@@ -157,6 +157,3 @@ class SelectInsurancePage extends StatelessWidget {
     );
   }
 }
-
-// Before: 220 lines of code
-// After: 1 lines of code

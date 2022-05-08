@@ -117,17 +117,6 @@ class Homepage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                             ),
-                            //  const Padding(
-                            //   padding: EdgeInsets.all(10.0),
-                            //   child: ReusableInputField(
-                            //     borderRadius: 8.0,
-                            //     enabledBorderColor: Color(0xFFF9F8F8),
-                            //     obscureText: false,
-                            //     labelColor: Color(0XFFE5E5E5),
-                            //     hintText: "Enter here",
-                            //     height: 50.0,
-                            //   ),
-                            // ),
                           ],
                         ),
                       ),
