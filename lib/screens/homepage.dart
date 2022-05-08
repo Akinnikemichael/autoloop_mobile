@@ -41,6 +41,7 @@ class Homepage extends StatelessWidget {
                             child: Row(children: const [
                               Text("Hello Amen ",
                                   style: TextStyle(
+                                      fontFamily: 'Poppins',
                                       fontSize: 32.0,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white)),
@@ -58,6 +59,7 @@ class Homepage extends StatelessWidget {
                               child: const Text(
                                 "What would you love to insure today?",
                                 style: TextStyle(
+                                  fontFamily: 'Poppins',
                                   fontSize: 19.0,
                                   fontWeight: FontWeight.w400,
                                   color: Color(0XFFF8F8F8),
@@ -115,17 +117,6 @@ class Homepage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                             ),
-                            //  const Padding(
-                            //   padding: EdgeInsets.all(10.0),
-                            //   child: ReusableInputField(
-                            //     borderRadius: 8.0,
-                            //     enabledBorderColor: Color(0xFFF9F8F8),
-                            //     obscureText: false,
-                            //     labelColor: Color(0XFFE5E5E5),
-                            //     hintText: "Enter here",
-                            //     height: 50.0,
-                            //   ),
-                            // ),
                           ],
                         ),
                       ),

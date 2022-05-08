@@ -41,6 +41,7 @@ class SelectInsurancePage extends StatelessWidget {
                             child: Row(children: const [
                               Text("Hello Amen ",
                                   style: TextStyle(
+                                      fontFamily: 'Poppins',
                                       fontSize: 32.0,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white)),
@@ -58,6 +59,7 @@ class SelectInsurancePage extends StatelessWidget {
                               child: const Text(
                                 "What would you love to insure today?",
                                 style: TextStyle(
+                                  fontFamily: 'Poppins',
                                   fontSize: 19.0,
                                   fontWeight: FontWeight.w400,
                                   color: Color(0XFFF8F8F8),
@@ -155,6 +157,3 @@ class SelectInsurancePage extends StatelessWidget {
     );
   }
 }
-
-// Before: 220 lines of code
-// After: 1 lines of code
