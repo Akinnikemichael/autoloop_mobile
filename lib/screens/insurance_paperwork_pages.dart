@@ -1,5 +1,6 @@
 import 'package:autoloop_mobile/components/rectangular_button.dart';
 import 'package:autoloop_mobile/components/reusable_input_field.dart';
+import 'package:autoloop_mobile/screens/homepage.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,19 @@ class InsurancePaperworkPage extends StatelessWidget {
                 fontFamily: 'Poppins',
                 fontSize: 16.0,
               )),
+          leading: IconButton(
+            constraints: const BoxConstraints(),
+            alignment: Alignment.center,
+            padding: const EdgeInsets.all(0.0),
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+              size: 18,
+            ),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
           backgroundColor: const Color(0XFF202C39),
         ),
         body: SingleChildScrollView(
@@ -144,7 +158,14 @@ class InsurancePaperworkPage extends StatelessWidget {
                     fontSize: 16.0,
                     fontWeight: FontWeight.w500,
                     height: 44.0,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Homepage(),
+                        ),
+                      );
+                    },
                     text: "Submit",
                     textColor: Colors.white,
                     width: double.infinity,

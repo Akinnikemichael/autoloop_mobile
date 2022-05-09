@@ -1,5 +1,6 @@
 import 'package:autoloop_mobile/components/rectangular_button.dart';
 import 'package:autoloop_mobile/screens/homepage.dart';
+import 'package:autoloop_mobile/screens/insurance_list.dart';
 import 'package:flutter/material.dart';
 
 class SelectInsurancePage extends StatelessWidget {
@@ -177,7 +178,15 @@ class SelectInsurancePage extends StatelessWidget {
                                 fontSize: 16.0,
                                 fontWeight: FontWeight.w500,
                                 height: 44.0,
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const InsuranceList(),
+                                    ),
+                                  );
+                                },
                                 text: "Proceed",
                                 textColor: Colors.white,
                                 width: double.infinity,

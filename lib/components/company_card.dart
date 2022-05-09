@@ -20,10 +20,8 @@ class CompanyCard extends StatelessWidget {
       elevation: 0,
       color: Colors.transparent,
       child: InkWell(
-        onTap: () {
-          print("tapped");
-        },
-        child: Container(
+        onTap: () {},
+        child: SizedBox(
           height: 64,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -49,7 +47,7 @@ class CompanyCard extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 4.0),
                         child: Text(
                           companyName,
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Color(0xff202C39),
                               fontSize: 16,
                               fontWeight: FontWeight.w600),
@@ -59,14 +57,14 @@ class CompanyCard extends StatelessWidget {
                         children: [
                           Text(
                             price,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Color(0xff878787), fontSize: 14),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 2.0),
                             child: Text(
                               frequency,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Color(0xff878787), fontSize: 14),
                             ),
                           ),
