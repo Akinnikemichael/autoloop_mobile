@@ -1,6 +1,6 @@
 import 'package:autoloop_mobile/components/rectangular_button.dart';
 import 'package:autoloop_mobile/components/reusable_input_field.dart';
-import 'package:autoloop_mobile/screens/homepage.dart';
+import 'package:autoloop_mobile/screens/check_email_page.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
@@ -162,7 +162,7 @@ class InsurancePaperworkPage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const Homepage(),
+                          builder: (context) => const CheckEmailPage(),
                         ),
                       );
                     },

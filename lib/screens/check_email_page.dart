@@ -1,9 +1,9 @@
 import 'package:autoloop_mobile/components/rectangular_button.dart';
-import 'package:autoloop_mobile/screens/insurance_paperwork_pages.dart';
+import 'package:autoloop_mobile/screens/homepage.dart';
 import 'package:flutter/material.dart';
 
-class InsurancePurchaseSuccessPage extends StatelessWidget {
-  const InsurancePurchaseSuccessPage({Key? key}) : super(key: key);
+class CheckEmailPage extends StatelessWidget {
+  const CheckEmailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class InsurancePurchaseSuccessPage extends StatelessWidget {
                 const SizedBox(
                   // width: width * 0.7,
                   child: Text(
-                    "Insurance successfully purchased",
+                    "Check your Email",
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 24.0,
@@ -37,6 +37,17 @@ class InsurancePurchaseSuccessPage extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
+                ),
+                const SizedBox(height: 16.0),
+                const Text(
+                  "Your documents have been sent to your email",
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0XFF202C39),
+                  ),
+                  textAlign: TextAlign.center,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 48.0),
@@ -50,11 +61,11 @@ class InsurancePurchaseSuccessPage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const InsurancePaperworkPage(),
+                          builder: (context) => const Homepage(),
                         ),
                       );
                     },
-                    text: "Proceed to Paperwork",
+                    text: "Back to home",
                     textColor: Colors.white,
                     width: double.infinity,
                     hasGradient: false,

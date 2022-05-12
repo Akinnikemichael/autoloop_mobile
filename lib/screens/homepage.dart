@@ -147,7 +147,7 @@ class Homepage extends StatelessWidget {
   Widget vehicleCard(String vehicleImageUrl, String vehicleName) {
     return Container(
       height: 100,
-      width: 180,
+      width: 172,
       decoration: BoxDecoration(
         color: const Color(0XFFF7EAFF),
         borderRadius: BorderRadius.circular(16.0),
